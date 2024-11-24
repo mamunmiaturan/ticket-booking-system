@@ -1,46 +1,69 @@
-<?php $this->load->view('layouts/header.php') ?>
-<main class="d-flex w-100">
-    <div class="container d-flex flex-column">
-        <div class="row vh-100">
-            <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto d-table h-100">
-                <div class="d-table-cell align-middle">
-                    <div class="text-center mt-4">
-                        <h1 class="h2">Welcome back!</h1>
-                        <p class="lead">
-                            Login to your account to continue
-                        </p>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="m-sm-3">
-                                <form>
-                                    <div class="mb-3">
-                                        <label class="form-label">Email</label>
-                                        <input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Password</label>
-                                        <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your password" />
-                                    </div>
-                                    <div>
-                                        <div class="form-check align-items-center">
-                                            <input id="customControlInline" type="checkbox" class="form-check-input" value="remember-me" name="remember-me" checked>
-                                            <label class="form-check-label text-small" for="customControlInline">Remember me</label>
+<?php $this->load->view('layouts/admin/header.php'); ?>
+
+<main>
+    <div class="container">
+        <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+                        <!-- Start Logo -->
+                        <div class="d-flex justify-content-center py-4">
+                            <a href="<?= base_url() ?>" class="logo d-flex align-items-center w-auto">
+                                <img src="<?= base_url('assets/img/logo.png') ?>" alt="Logo">
+                                <span class="d-none d-lg-block">TBS</span>
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="pt-2 pb-2">
+                                    <h5 class="card-title text-center pb-0 fs-4">Welcome Back</h5>
+                                    <p class="text-center small">Enter your username & password to login</p>
+                                </div>
+                                <!-- Start Form -->
+                                <form class="row g-3 needs-validation" method="POST" action="<?= base_url('auth/login') ?>" novalidate>
+                                    <!-- Email -->
+                                    <div class="col-12">
+                                        <label for="emailID" class="form-label">Email</label>
+                                        <div class="input-group has-validation">
+                                            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                            <input type="email" name="email" class="form-control" id="emailID" placeholder="Enter your email" required>
+                                            <div class="invalid-feedback">Please enter a valid email address.</div>
                                         </div>
                                     </div>
-                                    <div class="d-grid gap-2 mt-3">
-                                        <button type="submit" class="btn btn-lg btn-primary">Login</button>
+                                    <!-- Password -->
+                                    <div class="col-12">
+                                        <label for="passwordID" class="form-label">Password</label>
+                                        <div class="input-group has-validation">
+                                            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                            <input type="password" name="password" class="form-control" id="passwordID" placeholder="Enter your password" required>
+                                            <div class="invalid-feedback">Please enter your password.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100" type="submit">Login</button>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <p class="small mb-0 text-center">
+                                            Don't have an account? <a href="<?= base_url('auth/register') ?>">Create an account</a>
+                                        </p>
                                     </div>
                                 </form>
+                                <!-- End Form -->
                             </div>
                         </div>
-                    </div>
-                    <div class="text-center mb-3">
-                        Don't have an account? <a href="<?= base_url('auth/register')?>">Register</a>
+
+                        <div class="credits">
+                            Designed by <a href="#">Team Unicorn</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
-</main>
-<?php $this->load->view('layouts/footer.php') ?>
+</main><!-- End #main -->
+
+<?php $this->load->view('layouts/admin/footer.php'); ?>

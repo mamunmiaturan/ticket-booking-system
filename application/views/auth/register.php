@@ -1,49 +1,75 @@
-<?php $this->load->view('layouts/header.php') ?>
-<main class="d-flex w-100">
-    <div class="container d-flex flex-column">
-        <div class="row vh-100">
-            <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto d-table h-100">
-                <div class="d-table-cell align-middle">
+<?php $this->load->view('layouts/admin/header.php') ?>
+<main>
+    <div class="container">
+        <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+                        <!-- Start Logo -->
+                        <div class="d-flex justify-content-center py-4">
+                            <a href="index.html" class="logo d-flex align-items-center w-auto">
+                                <img src="assets/img/logo.png" alt="">
+                                <span class="d-none d-lg-block">TBS</span>
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="pt-4 pb-2">
+                                    <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
+                                    <p class="text-center small">Enter your personal details to create account</p>
+                                </div>
+                                <form class="row g-3 needs-validation" novalidate>
+                                    <div class="col-12">
+                                        <label for="yourName" class="form-label">Your Name</label>
+                                        <input type="text" name="name" class="form-control" id="yourName" required>
+                                        <div class="invalid-feedback">Please, enter your name!</div>
+                                    </div>
 
-                    <div class="text-center mt-4">
-                        <h1 class="h2">Get started</h1>
-                        <p class="lead">
-                            Start creating the best possible user experience for you customers.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="m-sm-3">
-                                <form method="POST">
-                                    <div class="mb-3">
-                                        <label class="form-label">Full name</label>
-                                        <input class="form-control form-control-lg" type="text" name="full_name" placeholder="Enter your name" />
+                                    <div class="col-12">
+                                        <label for="yourEmail" class="form-label">Your Email</label>
+                                        <input type="email" name="email" class="form-control" id="yourEmail" required>
+                                        <div class="invalid-feedback">Please enter a valid Email adddress!</div>
                                     </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Email</label>
-                                        <input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" />
+
+                                    <div class="col-12">
+                                        <label for="yourUsername" class="form-label">Username</label>
+                                        <div class="input-group has-validation">
+                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                            <input type="text" name="username" class="form-control" id="yourUsername" required>
+                                            <div class="invalid-feedback">Please choose a username.</div>
+                                        </div>
                                     </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Phone No</label>
-                                        <input class="form-control form-control-lg" type="number" name="phone_number" placeholder="Enter your email" />
+
+                                    <div class="col-12">
+                                        <label for="yourPassword" class="form-label">Password</label>
+                                        <input type="password" name="password" class="form-control" id="yourPassword" required>
+                                        <div class="invalid-feedback">Please enter your password!</div>
                                     </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Password</label>
-                                        <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter password" />
+
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
+                                            <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
+                                            <div class="invalid-feedback">You must agree before submitting.</div>
+                                        </div>
                                     </div>
-                                    <div class="d-grid gap-2 mt-3">
-                                        <button type="submit" class="btn btn-lg btn-primary">Register</button>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100" type="submit">Create Account</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="small mb-0 text-center">Already have an account? <a href="<?= base_url('auth/index') ?>">Log in</a></p>
                                     </div>
                                 </form>
                             </div>
-                            <div class="text-center">
-                                Already have account? <a href="<?= base_url('auth/index')?>">Log In</a>
-                            </div>
+                        </div>
+                        <div class="credits">
+                            Designed by <a href="#">Team Unicorn</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
-</main>
-<?php $this->load->view('layouts/footer.php') ?>
+</main><!-- End #main -->
+<?php $this->load->view('layouts/admin/footer.php') ?>

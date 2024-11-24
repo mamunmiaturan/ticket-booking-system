@@ -1,27 +1,15 @@
-<footer class="footer">
-  <div class="container-fluid">
-    <div class="row text-muted">
-      <div class="col-6 text-start">
-        <p class="mb-0">
-          <a class="text-muted" href="https://adminkit.io/" target="_blank"><strong>Team unicorn </strong></a> &copy;
-        </p>
-      </div>
-      <div class="col-6 text-end">
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a class="text-muted" href="#" target="_blank">Support</a>
-          </li>
-          <li class="list-inline-item">
-            <a class="text-muted" href="#" target="_blank">Help Center</a>
-          </li>
-          <li class="list-inline-item">
-            <a class="text-muted" href="#" target="_blank">Privacy</a>
-          </li>
-          <li class="list-inline-item">
-            <a class="text-muted" href="#" target="_blank">Terms</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Vendor JS Files -->
+<script src="<?= base_url('assets/vendor/apexcharts/apexcharts.min.js') ?>"></script>
+<script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+<script src="<?= base_url('assets/vendor/chart.js/chart.umd.js') ?>"></script>
+<script src="<?= base_url('assets/vendor/echarts/echarts.min.js') ?>"></script>
+<script src="<?= base_url('assets/vendor/quill/quill.js') ?>"></script>
+<script src="<?= base_url('assets/vendor/simple-datatables/simple-datatables.js') ?>"></script>
+<script src="<?= base_url('assets/vendor/tinymce/tinymce.min.js') ?>"></script>
+<script src="<?= base_url('assets/vendor/php-email-form/validate.js') ?>"></script>
+<!-- Template Main JS File -->
+<script src="<?= base_url('assets/js/main.js') ?>"></script>
+</body>
+
+</html>
